@@ -1,7 +1,6 @@
-
 import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Brain, Users, MessageSquare, BarChart3 } from "lucide-react";
+import { Brain, Users, MessageSquare, BarChart3, TrendingUp } from "lucide-react";
 
 const CRMMarketingSection = () => {
   const features = [
