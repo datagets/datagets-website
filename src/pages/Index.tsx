@@ -1,3 +1,4 @@
+
 import React, { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
@@ -10,6 +11,8 @@ import Testimonials from "@/components/Testimonials";
 import Newsletter from "@/components/Newsletter";
 import MadeByHumans from "@/components/MadeByHumans";
 import Footer from "@/components/Footer";
+import PersonalizationRibbon from "@/components/PersonalizationRibbon";
+import CRMMarketingSection from "@/components/CRMMarketingSection";
 
 const Index = () => {
   // Initialize intersection observer to detect when elements enter viewport
@@ -64,6 +67,12 @@ const Index = () => {
         {/* Hero Section - Top */}
         <Hero />
         
+        {/* Primary Offering - Ribbon 1: Personalization */}
+        <PersonalizationRibbon />
+
+        {/* Primary Offering - Ribbon 2: CRM Marketing 2.0 */}
+        <CRMMarketingSection />
+
         {/* Secondary Hero/Content Block */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
