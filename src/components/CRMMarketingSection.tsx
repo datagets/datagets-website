@@ -39,93 +39,89 @@ const CRMMarketingSection = () => {
           </p>
         </div>
 
-        {/* Single Large Card */}
+        {/* Single Large Card with Background Image */}
         <div className="max-w-7xl mx-auto">
           <Card className="border-2 border-gray-100 hover:border-orange-200 hover:shadow-2xl transition-all duration-300 overflow-hidden">
-            <div className="flex flex-col lg:flex-row min-h-[650px]">
-              {/* Left Side - Feature Cards in Diagonal Layout */}
-              <div className="lg:w-1/2 p-12 relative">
-                <div className="relative h-full min-h-[600px]">
-                  {/* Card 1 - Top Left */}
-                  <Card className="absolute top-0 left-0 w-56 border border-gray-200 hover:border-orange-300 hover:shadow-lg transition-all duration-200 bg-white z-40">
-                    <CardHeader className="pb-3">
-                      <div className="flex justify-center mb-2">
-                        {features[0].icon}
-                      </div>
-                      <CardTitle className="text-sm font-semibold text-gray-900 text-center leading-tight">
-                        {features[0].title}
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-gray-600 text-xs leading-relaxed text-center">
-                        {features[0].description}
-                      </p>
-                    </CardContent>
-                  </Card>
-
-                  {/* Card 2 - Top Right with offset */}
-                  <Card className="absolute top-8 right-0 w-56 border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white z-30">
-                    <CardHeader className="pb-3">
-                      <div className="flex justify-center mb-2">
-                        {features[1].icon}
-                      </div>
-                      <CardTitle className="text-sm font-semibold text-gray-900 text-center leading-tight">
-                        {features[1].title}
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-gray-600 text-xs leading-relaxed text-center">
-                        {features[1].description}
-                      </p>
-                    </CardContent>
-                  </Card>
-
-                  {/* Card 3 - Bottom Left with offset */}
-                  <Card className="absolute bottom-8 left-12 w-56 border border-gray-200 hover:border-purple-300 hover:shadow-lg transition-all duration-200 bg-white z-20">
-                    <CardHeader className="pb-3">
-                      <div className="flex justify-center mb-2">
-                        {features[2].icon}
-                      </div>
-                      <CardTitle className="text-sm font-semibold text-gray-900 text-center leading-tight">
-                        {features[2].title}
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-gray-600 text-xs leading-relaxed text-center">
-                        {features[2].description}
-                      </p>
-                    </CardContent>
-                  </Card>
-
-                  {/* Card 4 - Bottom Right */}
-                  <Card className="absolute bottom-0 right-12 w-56 border border-gray-200 hover:border-green-300 hover:shadow-lg transition-all duration-200 bg-white z-10">
-                    <CardHeader className="pb-3">
-                      <div className="flex justify-center mb-2">
-                        {features[3].icon}
-                      </div>
-                      <CardTitle className="text-sm font-semibold text-gray-900 text-center leading-tight">
-                        {features[3].title}
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-gray-600 text-xs leading-relaxed text-center">
-                        {features[3].description}
-                      </p>
-                    </CardContent>
-                  </Card>
-                </div>
+            <div className="relative min-h-[650px]">
+              {/* Background Image */}
+              <div className="absolute inset-0">
+                <img 
+                  src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+                  alt="Team collaboration and data visualization"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-black/20"></div>
               </div>
 
-              {/* Right Side - Image */}
-              <div className="lg:w-1/2 relative flex items-center">
-                <div className="w-full h-full min-h-[400px] lg:min-h-[650px]">
-                  <img 
-                    src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
-                    alt="Team collaboration and data visualization"
-                    className="w-full h-full object-cover rounded-r-lg"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-l from-transparent to-white/10 rounded-r-lg"></div>
-                </div>
+              {/* Floating Feature Cards */}
+              <div className="relative z-10 p-12 h-full min-h-[650px]">
+                {/* Card 1 - Top Left */}
+                <Card className="absolute top-12 left-12 w-64 border border-white/30 hover:border-orange-300 hover:shadow-2xl transition-all duration-300 bg-white/95 backdrop-blur-sm shadow-lg">
+                  <CardHeader className="pb-3">
+                    <div className="flex justify-center mb-2">
+                      {features[0].icon}
+                    </div>
+                    <CardTitle className="text-sm font-semibold text-gray-900 text-center leading-tight">
+                      {features[0].title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-600 text-xs leading-relaxed text-center">
+                      {features[0].description}
+                    </p>
+                  </CardContent>
+                </Card>
+
+                {/* Card 2 - Top Right */}
+                <Card className="absolute top-20 right-12 w-64 border border-white/30 hover:border-blue-300 hover:shadow-2xl transition-all duration-300 bg-white/95 backdrop-blur-sm shadow-lg">
+                  <CardHeader className="pb-3">
+                    <div className="flex justify-center mb-2">
+                      {features[1].icon}
+                    </div>
+                    <CardTitle className="text-sm font-semibold text-gray-900 text-center leading-tight">
+                      {features[1].title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-600 text-xs leading-relaxed text-center">
+                      {features[1].description}
+                    </p>
+                  </CardContent>
+                </Card>
+
+                {/* Card 3 - Bottom Left */}
+                <Card className="absolute bottom-20 left-20 w-64 border border-white/30 hover:border-purple-300 hover:shadow-2xl transition-all duration-300 bg-white/95 backdrop-blur-sm shadow-lg">
+                  <CardHeader className="pb-3">
+                    <div className="flex justify-center mb-2">
+                      {features[2].icon}
+                    </div>
+                    <CardTitle className="text-sm font-semibold text-gray-900 text-center leading-tight">
+                      {features[2].title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-600 text-xs leading-relaxed text-center">
+                      {features[2].description}
+                    </p>
+                  </CardContent>
+                </Card>
+
+                {/* Card 4 - Bottom Right */}
+                <Card className="absolute bottom-12 right-20 w-64 border border-white/30 hover:border-green-300 hover:shadow-2xl transition-all duration-300 bg-white/95 backdrop-blur-sm shadow-lg">
+                  <CardHeader className="pb-3">
+                    <div className="flex justify-center mb-2">
+                      {features[3].icon}
+                    </div>
+                    <CardTitle className="text-sm font-semibold text-gray-900 text-center leading-tight">
+                      {features[3].title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-600 text-xs leading-relaxed text-center">
+                      {features[3].description}
+                    </p>
+                  </CardContent>
+                </Card>
               </div>
             </div>
           </Card>
