@@ -1,4 +1,3 @@
-
 import React, { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
@@ -13,45 +12,37 @@ import MadeByHumans from "@/components/MadeByHumans";
 import Footer from "@/components/Footer";
 import PersonalizationRibbon from "@/components/PersonalizationRibbon";
 import CRMMarketingSection from "@/components/CRMMarketingSection";
-
 const Index = () => {
   // Initialize intersection observer to detect when elements enter viewport
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("animate-fade-in");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-    
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate-fade-in");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
     const elements = document.querySelectorAll(".animate-on-scroll");
-    elements.forEach((el) => observer.observe(el));
-    
+    elements.forEach(el => observer.observe(el));
     return () => {
-      elements.forEach((el) => observer.unobserve(el));
+      elements.forEach(el => observer.unobserve(el));
     };
   }, []);
-
   useEffect(() => {
     // This helps ensure smooth scrolling for the anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        
         const targetId = this.getAttribute('href')?.substring(1);
         if (!targetId) return;
-        
         const targetElement = document.getElementById(targetId);
         if (!targetElement) return;
-        
+
         // Increased offset to account for mobile nav
         const offset = window.innerWidth < 768 ? 100 : 80;
-        
         window.scrollTo({
           top: targetElement.offsetTop - offset,
           behavior: 'smooth'
@@ -59,9 +50,7 @@ const Index = () => {
       });
     });
   }, []);
-
-  return (
-    <div className="min-h-screen bg-gray-50">
+  return <div className="min-h-screen bg-gray-50">
       <Navbar />
       <main className="space-y-0">
         {/* Hero Section - Top */}
@@ -74,40 +63,13 @@ const Index = () => {
         <CRMMarketingSection />
 
         {/* Secondary Hero/Content Block */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-col lg:flex-row items-center gap-12">
-              <div className="lg:w-1/2">
-                <h2 className="text-3xl font-bold mb-4">Transform Your Business</h2>
-                <p className="text-gray-600 mb-6">
-                  Leverage cutting-edge AI technology to revolutionize your data processing 
-                  and customer engagement strategies.
-                </p>
-                <div className="flex gap-4">
-                  <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors">
-                    Get Started
-                  </button>
-                  <button className="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors">
-                    Learn More
-                  </button>
-                </div>
-              </div>
-              <div className="lg:w-1/2">
-                <div className="w-64 h-64 bg-teal-200 rounded-full mx-auto flex items-center justify-center">
-                  <span className="text-teal-800 font-medium">Visual Element</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        
 
         {/* Content Block with Side Layout */}
-        <section className="py-16 bg-gray-50">
+        <section className="bg-gray-50 py-[49px] rounded-2xl mx-0">
           <div className="container mx-auto px-4">
             <div className="flex flex-col lg:flex-row gap-12">
-              <div className="lg:w-1/3">
-                <div className="w-48 h-48 bg-teal-300 transform rotate-45 mx-auto mb-8"></div>
-              </div>
+              
               <div className="lg:w-2/3">
                 <h2 className="text-3xl font-bold mb-4">Advanced Analytics</h2>
                 <p className="text-gray-600 mb-6">
@@ -138,15 +100,13 @@ const Index = () => {
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-12">Our Solutions</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-              {[1, 2, 3, 4, 5].map((item) => (
-                <div key={item} className="bg-teal-100 p-6 rounded-lg">
+              {[1, 2, 3, 4, 5].map(item => <div key={item} className="bg-teal-100 p-6 rounded-lg">
                   <div className="w-full h-32 bg-teal-200 rounded mb-4"></div>
                   <h3 className="font-semibold text-teal-800">Solution {item}</h3>
                   <p className="text-sm text-teal-600 mt-2">
                     Brief description of the solution and its benefits.
                   </p>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </section>
@@ -208,11 +168,9 @@ const Index = () => {
               <div className="flex flex-col lg:flex-row items-center gap-8">
                 <div className="lg:w-1/3">
                   <div className="grid grid-cols-2 gap-4">
-                    {[1, 2, 3, 4, 5, 6].map((item) => (
-                      <div key={item} className="bg-orange-200 p-4 rounded-lg aspect-square flex items-center justify-center">
+                    {[1, 2, 3, 4, 5, 6].map(item => <div key={item} className="bg-orange-200 p-4 rounded-lg aspect-square flex items-center justify-center">
                         <span className="text-orange-800 font-medium">{item}</span>
-                      </div>
-                    ))}
+                      </div>)}
                   </div>
                 </div>
                 <div className="lg:w-2/3">
@@ -241,8 +199,6 @@ const Index = () => {
         <MadeByHumans />
       </main>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
