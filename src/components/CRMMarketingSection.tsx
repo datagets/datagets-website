@@ -43,14 +43,14 @@ const CRMMarketingSection = () => {
         <div className="max-w-7xl mx-auto">
           <Card className="border-2 border-gray-100 hover:border-orange-200 hover:shadow-2xl transition-all duration-300 overflow-hidden">
             <div className="relative min-h-[650px]">
-              {/* Background Image */}
+              {/* Background Image with reduced corner radius and opacity */}
               <div className="absolute inset-0">
                 <img 
                   src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
                   alt="Team collaboration and data visualization"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover rounded-lg"
                 />
-                <div className="absolute inset-0 bg-black/20"></div>
+                <div className="absolute inset-0 bg-black/50 rounded-lg"></div>
               </div>
 
               {/* Floating Feature Cards */}
