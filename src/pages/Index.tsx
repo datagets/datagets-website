@@ -15,6 +15,7 @@ import CRMMarketingSection from "@/components/CRMMarketingSection";
 import TabCardSection from "@/components/TabCardSection";
 import BrandLiftSection from "@/components/BrandLiftSection";
 import WhyDataGetsSection from "@/components/WhyDataGetsSection";
+import WorkWithPlatformSection from "@/components/WorkWithPlatformSection";
 
 const Index = () => {
   // Initialize intersection observer to detect when elements enter viewport
@@ -75,6 +76,9 @@ const Index = () => {
 
         {/* Why DataGets Section */}
         <WhyDataGetsSection />
+
+        {/* Work with Platform Section */}
+        <WorkWithPlatformSection />
 
         {/* Card Grid Section */}
         
