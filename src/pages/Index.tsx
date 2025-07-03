@@ -12,6 +12,8 @@ import MadeByHumans from "@/components/MadeByHumans";
 import Footer from "@/components/Footer";
 import PersonalizationRibbon from "@/components/PersonalizationRibbon";
 import CRMMarketingSection from "@/components/CRMMarketingSection";
+import TabCardSection from "@/components/TabCardSection";
+
 const Index = () => {
   // Initialize intersection observer to detect when elements enter viewport
   useEffect(() => {
@@ -94,6 +96,9 @@ const Index = () => {
             </div>
           </div>
         </section>
+
+        {/* New Tab Card Section - Above Our Solutions */}
+        <TabCardSection />
 
         {/* Card Grid Section */}
         <section className="py-16 bg-white">
@@ -201,4 +206,5 @@ const Index = () => {
       <Footer />
     </div>;
 };
+
 export default Index;
