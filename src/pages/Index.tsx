@@ -12,8 +12,6 @@ import MadeByHumans from "@/components/MadeByHumans";
 import Footer from "@/components/Footer";
 import PersonalizationRibbon from "@/components/PersonalizationRibbon";
 import CRMMarketingSection from "@/components/CRMMarketingSection";
-import TabCardSection from "@/components/TabCardSection";
-
 const Index = () => {
   // Initialize intersection observer to detect when elements enter viewport
   useEffect(() => {
@@ -97,9 +95,6 @@ const Index = () => {
           </div>
         </section>
 
-        {/* New Tab Card Section - Above Our Solutions */}
-        <TabCardSection />
-
         {/* Card Grid Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -132,7 +127,7 @@ const Index = () => {
                     <span className="text-gray-700">Advanced AI Processing</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                    
                     <span className="text-gray-700">Real-time Analytics</span>
                   </div>
                   <div className="flex items-center gap-3">
@@ -206,5 +201,4 @@ const Index = () => {
       <Footer />
     </div>;
 };
-
 export default Index;
