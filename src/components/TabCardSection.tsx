@@ -7,7 +7,11 @@ import useEmblaCarousel from "embla-carousel-react";
 
 const TabCardSection = () => {
   const [activeTab, setActiveTab] = useState("campaign-strategy");
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false });
+  const [emblaRef, emblaApi] = useEmblaCarousel({ 
+    loop: false,
+    align: "start",
+    duration: 20
+  });
 
   const cardData = [
     {
@@ -37,8 +41,10 @@ const TabCardSection = () => {
   ];
 
   const handleTabClick = (tabId: string) => {
+    console.log("Tab clicked:", tabId);
     setActiveTab(tabId);
     const tabIndex = cardData.findIndex(card => card.id === tabId);
+    console.log("Scrolling to index:", tabIndex);
     if (emblaApi && tabIndex !== -1) {
       emblaApi.scrollTo(tabIndex);
     }
@@ -46,10 +52,19 @@ const TabCardSection = () => {
 
   useEffect(() => {
     if (emblaApi) {
-      emblaApi.on('select', () => {
+      const onSelect = () => {
         const selectedIndex = emblaApi.selectedScrollSnap();
+        console.log("Carousel selected index:", selectedIndex);
         setActiveTab(cardData[selectedIndex].id);
-      });
+      };
+
+      emblaApi.on('select', onSelect);
+      emblaApi.on('reInit', onSelect);
+
+      return () => {
+        emblaApi.off('select', onSelect);
+        emblaApi.off('reInit', onSelect);
+      };
     }
   }, [emblaApi, cardData]);
 
@@ -63,7 +78,7 @@ const TabCardSection = () => {
                 key={card.id} 
                 value={card.id}
                 onClick={() => handleTabClick(card.id)}
-                className="text-xs sm:text-sm px-2 py-2"
+                className="text-xs sm:text-sm px-2 py-2 transition-all duration-200"
               >
                 {card.title}
               </TabsTrigger>
@@ -71,10 +86,10 @@ const TabCardSection = () => {
           </TabsList>
           
           <Carousel ref={emblaRef} className="w-full">
-            <CarouselContent>
+            <CarouselContent className="-ml-2 md:-ml-4">
               {cardData.map((card) => (
-                <CarouselItem key={card.id}>
-                  <Card className="min-h-[300px]">
+                <CarouselItem key={card.id} className="pl-2 md:pl-4">
+                  <Card className="min-h-[300px] transition-all duration-300 hover:shadow-lg">
                     <CardContent className="p-0">
                       <div className="flex flex-col md:flex-row h-full">
                         {/* Text Content - Left Side */}
@@ -89,7 +104,7 @@ const TabCardSection = () => {
                         
                         {/* Image - Right Side */}
                         <div className="md:w-1/3 flex items-center justify-center p-8">
-                          <div className="w-32 h-32 bg-teal-200 transform rotate-45 rounded-lg shadow-lg"></div>
+                          <div className="w-32 h-32 bg-teal-200 transform rotate-45 rounded-lg shadow-lg transition-transform duration-300 hover:rotate-[50deg] hover:scale-105"></div>
                         </div>
                       </div>
                     </CardContent>
