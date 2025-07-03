@@ -7,8 +7,6 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel";
 
 const PersonalizationRibbon = () => {
@@ -45,13 +43,19 @@ const PersonalizationRibbon = () => {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          <Carousel className="w-full">
-            <CarouselContent>
+        <div className="max-w-6xl mx-auto">
+          <Carousel 
+            className="w-full"
+            opts={{
+              align: "center",
+              loop: true,
+            }}
+          >
+            <CarouselContent className="-ml-2 md:-ml-4">
               {features.map((feature, index) => (
-                <CarouselItem key={index}>
-                  <div className="p-4">
-                    <Card className={`${feature.color} border-2 hover:shadow-xl transition-shadow h-full`}>
+                <CarouselItem key={index} className="pl-2 md:pl-4 basis-4/5 md:basis-3/4 lg:basis-3/5">
+                  <div className="p-2">
+                    <Card className={`${feature.color} border-2 hover:shadow-xl transition-all duration-300 h-full cursor-grab active:cursor-grabbing`}>
                       <CardHeader className="text-center pb-6">
                         <div className="flex justify-center mb-6">
                           {feature.icon}
@@ -74,8 +78,6 @@ const PersonalizationRibbon = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
           </Carousel>
         </div>
       </div>
