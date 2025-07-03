@@ -17,7 +17,7 @@ const WorkWithPlatformSection = () => {
           <CardContent className="p-8">
             <div className="flex flex-col lg:flex-row items-center gap-12">
               {/* Left side - Diagonal Cards */}
-              <div className="lg:w-1/2 relative h-96 flex items-center justify-center">
+              <div className="lg:w-1/2 order-2 lg:order-1 relative h-96 flex items-center justify-center">
                 <div className="relative w-full h-full max-w-md">
                   {/* Card 1 - Top Left */}
                   <div className="absolute bg-orange-400 rounded-lg w-24 h-32 top-8 left-12 transform rotate-12 shadow-lg hover:rotate-6 transition-transform duration-300"></div>
@@ -37,7 +37,7 @@ const WorkWithPlatformSection = () => {
               </div>
 
               {/* Right side - Content */}
-              <div className="lg:w-1/2 space-y-6">
+              <div className="lg:w-1/2 order-1 lg:order-2 space-y-6">
                 <div>
                   <h3 className="text-4xl font-bold text-gray-900 mb-4">
                     Seamless Integration
