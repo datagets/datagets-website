@@ -1,4 +1,3 @@
-
 import React, { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
@@ -73,35 +72,7 @@ const Index = () => {
         {/* Primary Offering - Ribbon 2: CRM Marketing 2.0 */}
         <CRMMarketingSection />
 
-        {/* Secondary Hero/Content Block */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-col lg:flex-row items-center gap-12">
-              <div className="lg:w-1/2">
-                <h2 className="text-3xl font-bold mb-4">Transform Your Business</h2>
-                <p className="text-gray-600 mb-6">
-                  Leverage cutting-edge AI technology to revolutionize your data processing 
-                  and customer engagement strategies.
-                </p>
-                <div className="flex gap-4">
-                  <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors">
-                    Get Started
-                  </button>
-                  <button className="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors">
-                    Learn More
-                  </button>
-                </div>
-              </div>
-              <div className="lg:w-1/2">
-                <div className="w-64 h-64 bg-teal-200 rounded-full mx-auto flex items-center justify-center">
-                  <span className="text-teal-800 font-medium">Visual Element</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Content Block with Side Layout */}
+        {/* Advanced Analytics - Moved to top */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="flex flex-col lg:flex-row gap-12">
