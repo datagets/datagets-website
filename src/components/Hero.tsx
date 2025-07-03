@@ -138,56 +138,13 @@ const Hero = () => {
           <div className="w-full lg:w-1/2 relative mt-6 lg:mt-0">
             {!showVideo ? (
               <div className="relative z-10 animate-fade-in" style={{ animationDelay: "0.9s" }}>
-                <div className="relative transition-all duration-500 ease-out overflow-hidden rounded-2xl sm:rounded-3xl shadow-2xl bg-white">
-                  <div className="aspect-video bg-gradient-to-br from-blue-100 to-purple-100 p-8 flex items-center justify-center">
-                    {/* AI Pipeline Illustration */}
-                    <div className="w-full max-w-md space-y-6">
-                      {/* Data Sources */}
-                      <div className="flex justify-center space-x-4">
-                        <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center">
-                          <div className="w-6 h-6 bg-white rounded opacity-80"></div>
-                        </div>
-                        <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center">
-                          <div className="w-6 h-6 bg-white rounded opacity-80"></div>
-                        </div>
-                        <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center">
-                          <div className="w-6 h-6 bg-white rounded opacity-80"></div>
-                        </div>
-                      </div>
-                      
-                      {/* Flow Arrows */}
-                      <div className="flex justify-center">
-                        <ArrowRight className="w-8 h-8 text-gray-400" />
-                      </div>
-                      
-                      {/* AI Processing */}
-                      <div className="flex justify-center">
-                        <div className="w-20 h-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center">
-                          <span className="text-white font-bold text-lg">AI</span>
-                        </div>
-                      </div>
-                      
-                      {/* Output Arrows */}
-                      <div className="flex justify-center space-x-8">
-                        <ArrowRight className="w-6 h-6 text-gray-400 rotate-45" />
-                        <ArrowRight className="w-6 h-6 text-gray-400" />
-                        <ArrowRight className="w-6 h-6 text-gray-400 -rotate-45" />
-                      </div>
-                      
-                      {/* Touchpoints */}
-                      <div className="flex justify-center space-x-4">
-                        <div className="w-10 h-10 bg-orange-400 rounded-lg flex items-center justify-center">
-                          <span className="text-white text-xs font-bold">📧</span>
-                        </div>
-                        <div className="w-10 h-10 bg-red-400 rounded-lg flex items-center justify-center">
-                          <span className="text-white text-xs font-bold">📱</span>
-                        </div>
-                        <div className="w-10 h-10 bg-teal-400 rounded-lg flex items-center justify-center">
-                          <span className="text-white text-xs font-bold">💻</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                <div className="relative transition-all duration-500 ease-out overflow-hidden rounded-2xl sm:rounded-3xl shadow-2xl">
+                  <img 
+                    ref={imageRef}
+                    src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                    alt="AI Technology and Data Processing"
+                    className="w-full h-auto aspect-video object-cover"
+                  />
                   
                   {/* Video Overlay Button */}
                   <div className="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/30 transition-colors cursor-pointer" onClick={() => setShowVideo(true)}>
