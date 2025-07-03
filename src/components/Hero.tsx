@@ -83,12 +83,19 @@ const Hero = () => {
       className="overflow-hidden relative bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50" 
       id="hero" 
       style={{
-        padding: isMobile ? '100px 12px 40px' : '120px 20px 60px'
+        padding: isMobile ? '100px 12px 40px' : '120px 20px 60px',
+        backgroundImage: 'url(https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=5760&q=80)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
       }}
     >
+      {/* Overlay to ensure text readability */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50/90 via-indigo-50/90 to-purple-50/90"></div>
+      
       <div className="absolute -top-[10%] -right-[5%] w-1/2 h-[70%] bg-gradient-to-r from-blue-400/20 to-purple-400/20 opacity-20 blur-3xl rounded-full"></div>
       
-      <div className="container px-4 sm:px-6 lg:px-8" ref={containerRef}>
+      <div className="container px-4 sm:px-6 lg:px-8 relative z-10" ref={containerRef}>
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 items-center">
           <div className="w-full lg:w-1/2">
             <div 
