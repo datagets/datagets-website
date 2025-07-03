@@ -18,13 +18,13 @@ const BrandLiftSection = () => {
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Brand Lift (Rev as Heading)</h2>
         </div>
         
-        <Card className="max-w-6xl mx-auto bg-gray-50 border-2 border-gray-200">
+        <Card className="max-w-7xl mx-auto bg-gray-50 border-2 border-gray-200">
           <CardContent className="p-8">
             <div className="flex gap-6 justify-center">
               {brandCards.map((card) => (
                 <div
                   key={card.id}
-                  className={`${card.color} rounded-xl p-6 h-32 w-32 flex items-center justify-center transition-all duration-300 hover:scale-105 hover:shadow-md flex-shrink-0`}
+                  className={`${card.color} rounded-xl p-6 h-50 w-35 flex items-center justify-center transition-all duration-300 hover:scale-105 hover:shadow-md flex-shrink-0`}
                 >
                   <div className="text-center">
                     <div className="text-sm font-medium text-gray-700">
