@@ -60,35 +60,35 @@ const CRMMarketingSection = () => {
 
             {features.map((feature) => (
               <TabsContent key={feature.id} value={feature.id}>
-                <Card className="border-2 border-gray-100 hover:border-orange-200 hover:shadow-2xl transition-all duration-300">
+                <Card className="border-2 border-gray-100 hover:border-orange-200 hover:shadow-lg transition-all duration-300">
                   <CardContent className="p-0">
-                    <div className="flex flex-col lg:flex-row min-h-[500px]">
-                      {/* Left side - Image */}
-                      <div className="lg:w-1/2 relative">
-                        <img 
-                          src={feature.image}
-                          alt={feature.title}
-                          className="w-full h-full object-cover rounded-l-lg"
-                        />
-                        <div className="absolute inset-0 bg-black/20 rounded-l-lg"></div>
-                      </div>
-
-                      {/* Right side - Content */}
-                      <div className="lg:w-1/2 p-12 flex flex-col justify-center">
-                        <div className="flex items-center mb-6">
+                    <div className="flex flex-col lg:flex-row min-h-[300px]">
+                      {/* Left side - Content */}
+                      <div className="lg:w-2/3 p-8 flex flex-col justify-center">
+                        <div className="flex items-center mb-4">
                           {feature.icon}
-                          <CardTitle className="text-3xl font-bold text-gray-900 ml-4">
+                          <CardTitle className="text-2xl font-bold text-gray-900 ml-4">
                             {feature.title}
                           </CardTitle>
                         </div>
-                        <p className="text-lg text-gray-600 leading-relaxed">
+                        <p className="text-base text-gray-600 leading-relaxed mb-6">
                           {feature.description}
                         </p>
-                        <div className="mt-8">
-                          <button className="bg-orange-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-orange-700 transition-colors">
+                        <div>
+                          <button className="bg-orange-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-orange-700 transition-colors">
                             Learn More
                           </button>
                         </div>
+                      </div>
+
+                      {/* Right side - Image */}
+                      <div className="lg:w-1/3 relative">
+                        <img 
+                          src={feature.image}
+                          alt={feature.title}
+                          className="w-full h-full object-cover rounded-r-lg"
+                        />
+                        <div className="absolute inset-0 bg-black/10 rounded-r-lg"></div>
                       </div>
                     </div>
                   </CardContent>
