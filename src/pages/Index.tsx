@@ -66,34 +66,7 @@ const Index = () => {
         
 
         {/* Content Block with Side Layout */}
-        <section className="bg-gray-50 py-[49px] rounded-2xl mx-0">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-col lg:flex-row gap-12">
-              
-              <div className="lg:w-2/3">
-                <h2 className="text-3xl font-bold mb-4">Advanced Analytics</h2>
-                <p className="text-gray-600 mb-6">
-                  Our AI-powered analytics platform provides deep insights into your customer 
-                  behavior and market trends, enabling data-driven decision making.
-                </p>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  <div className="bg-orange-200 p-4 rounded-lg text-center">
-                    <span className="text-orange-800 font-medium">Metric 1</span>
-                  </div>
-                  <div className="bg-orange-200 p-4 rounded-lg text-center">
-                    <span className="text-orange-800 font-medium">Metric 2</span>
-                  </div>
-                  <div className="bg-orange-200 p-4 rounded-lg text-center">
-                    <span className="text-orange-800 font-medium">Metric 3</span>
-                  </div>
-                  <div className="bg-orange-200 p-4 rounded-lg text-center">
-                    <span className="text-orange-800 font-medium">Metric 4</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        
 
         {/* Card Grid Section */}
         <section className="py-16 bg-white">
