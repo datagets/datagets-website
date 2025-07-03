@@ -1,4 +1,3 @@
-
 import React, { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
@@ -15,7 +14,6 @@ import PersonalizationRibbon from "@/components/PersonalizationRibbon";
 import CRMMarketingSection from "@/components/CRMMarketingSection";
 import TabCardSection from "@/components/TabCardSection";
 import BrandLiftSection from "@/components/BrandLiftSection";
-
 const Index = () => {
   // Initialize intersection observer to detect when elements enter viewport
   useEffect(() => {
@@ -54,9 +52,7 @@ const Index = () => {
       });
     });
   }, []);
-
-  return (
-    <div className="min-h-screen bg-gray-50">
+  return <div className="min-h-screen bg-gray-50">
       <Navbar />
       <main className="space-y-0">
         {/* Hero Section - Top */}
@@ -75,22 +71,7 @@ const Index = () => {
         <BrandLiftSection />
 
         {/* Card Grid Section */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12">Our Solutions</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-              {[1, 2, 3, 4, 5].map(item => (
-                <div key={item} className="bg-teal-100 p-6 rounded-lg">
-                  <div className="w-full h-32 bg-teal-200 rounded mb-4"></div>
-                  <h3 className="font-semibold text-teal-800">Solution {item}</h3>
-                  <p className="text-sm text-teal-600 mt-2">
-                    Brief description of the solution and its benefits.
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        
 
         {/* Two Column Layout */}
         <section className="py-16 bg-gray-50">
@@ -149,11 +130,9 @@ const Index = () => {
               <div className="flex flex-col lg:flex-row items-center gap-8">
                 <div className="lg:w-1/3">
                   <div className="grid grid-cols-2 gap-4">
-                    {[1, 2, 3, 4, 5, 6].map(item => (
-                      <div key={item} className="bg-orange-200 p-4 rounded-lg aspect-square flex items-center justify-center">
+                    {[1, 2, 3, 4, 5, 6].map(item => <div key={item} className="bg-orange-200 p-4 rounded-lg aspect-square flex items-center justify-center">
                         <span className="text-orange-800 font-medium">{item}</span>
-                      </div>
-                    ))}
+                      </div>)}
                   </div>
                 </div>
                 <div className="lg:w-2/3">
@@ -182,8 +161,6 @@ const Index = () => {
         <MadeByHumans />
       </main>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
