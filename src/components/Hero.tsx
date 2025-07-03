@@ -83,11 +83,12 @@ const Hero = () => {
       className="overflow-hidden relative bg-gradient-to-br from-purple-600 via-purple-700 to-purple-800" 
       id="hero" 
       style={{
-        padding: isMobile ? '100px 12px 40px' : '120px 20px 60px',
-        backgroundImage: `linear-gradient(135deg, rgba(147, 51, 234, 0.9) 0%, rgba(126, 34, 206, 0.8) 50%, rgba(107, 33, 168, 0.9) 100%), url('https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=6052&q=80')`,
+        padding: isMobile ? '100px 12px 80px' : '120px 20px 120px',
+        backgroundImage: `linear-gradient(135deg, rgba(147, 51, 234, 0.3) 0%, rgba(126, 34, 206, 0.2) 50%, rgba(107, 33, 168, 0.3) 100%), url('https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=6052&q=80')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
+        backgroundRepeat: 'no-repeat',
+        minHeight: isMobile ? 'auto' : '100vh'
       }}
     >
       <div className="absolute -top-[10%] -right-[5%] w-1/2 h-[70%] bg-gradient-to-r from-blue-400/20 to-purple-400/20 opacity-20 blur-3xl rounded-full"></div>
@@ -95,14 +96,14 @@ const Hero = () => {
       <div className="container px-4 sm:px-6 lg:px-8" ref={containerRef}>
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 items-center">
           <div className="w-full lg:w-1/2">
-            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-white/20 to-white/10 backdrop-blur-sm rounded-full text-sm font-medium text-white mb-3 sm:mb-6 opacity-0 animate-fade-in" style={{
+            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-white/30 to-white/20 backdrop-blur-sm rounded-full text-sm font-medium text-white mb-3 sm:mb-6 opacity-0 animate-fade-in" style={{
               animationDelay: "0.1s"
             }}>
               <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-white text-purple-600 mr-2 text-xs font-bold">AI</span>
               <span>Data-Driven Solutions</span>
             </div>
             
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight opacity-0 animate-fade-in text-white" style={{
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight opacity-0 animate-fade-in text-white drop-shadow-lg" style={{
               animationDelay: "0.3s"
             }}>
               Activate Your 1P Data.<br className="hidden sm:inline" />
@@ -111,7 +112,7 @@ const Hero = () => {
             
             <p style={{
               animationDelay: "0.5s"
-            }} className="mt-3 sm:mt-6 mb-4 sm:mb-8 leading-relaxed opacity-0 animate-fade-in text-white/90 font-normal text-base sm:text-lg text-left">
+            }} className="mt-3 sm:mt-6 mb-4 sm:mb-8 leading-relaxed opacity-0 animate-fade-in text-white font-normal text-base sm:text-lg text-left drop-shadow-md">
               AI-based Productized Solution that blends a scalable product with domain expertise for eCommerce and digital marketing
             </p>
             
@@ -123,7 +124,7 @@ const Hero = () => {
                 <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
               </button>
               
-              <button className="flex items-center justify-center group w-full sm:w-auto text-center bg-transparent hover:bg-white/10 text-white font-semibold py-4 px-6 rounded-lg border-2 border-white/30 hover:border-white/50 transition-all duration-200 backdrop-blur-sm">
+              <button className="flex items-center justify-center group w-full sm:w-auto text-center bg-transparent hover:bg-white/10 text-white font-semibold py-4 px-6 rounded-lg border-2 border-white/50 hover:border-white/70 transition-all duration-200 backdrop-blur-sm">
                 Talk to an Expert
                 <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
               </button>
