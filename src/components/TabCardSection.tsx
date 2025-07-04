@@ -69,14 +69,14 @@ const TabCardSection = () => {
       <div className="container mx-auto px-4">
         <Tabs value={activeTab} onValueChange={handleTabClick} className="w-full">
           {/* Tabs List */}
-          <TabsList className="flex flex-wrap justify-center w-full mb-10 gap-2 bg-white p-2 h-[5rem] rounded-xl shadow border border-gray-200">
+          <TabsList className="flex flex-wrap justify-center w-full mb-10 gap-2 bg-gray-200 p-2 h-[5rem] rounded-xl shadow border border-gray-200">
             {cardData.map((card) => (
               <TabsTrigger
                 key={card.id}
                 value={card.id}
-                className={`text-sm font-medium px-4 py-2 rounded-lg transition-colors duration-200 ${
+                className={`text-sm font-medium px-4 py-2 rounded-lg transition-colors duration-200 bg-gray-200 border-2  ${
                   activeTab === card.id
-                    ? "bg-blue-600 text-white shadow"
+                    ? "bg-gray-200 text-white shadow"
                     : "text-gray-700 hover:bg-gray-100"
                 }`}
               >

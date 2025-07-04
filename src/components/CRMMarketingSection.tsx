@@ -69,7 +69,7 @@ const CRMMarketingSection = () => {
               <img
                 src="https://img.freepik.com/free-vector/ai-technology-brain-background-vector-digital-transformation-concept_53876-124648.jpg"
                 alt="CRM marketing illustration"
-                className="w-full h-auto object-cover"
+                className="w-full h-[27rem] object-cover"
               />
             </div>
           </div>
